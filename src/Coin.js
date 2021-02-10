@@ -7,6 +7,7 @@ const Coin = ({ isHidden, image }) => {
 				className={`Coin-image ${isHidden}`}
 				src={image}
 				alt="no img found"
+				data-testid="coin-image"
 			/>
 		</>
 	);

@@ -13,7 +13,7 @@ const FlipCoin = () => {
 		side === 1 ? setNumTails(numTails + 1) : setNumHeads(numHeads + 1);
 	};
 
-	const [side, setSide] = useState(0);
+	const [side, setSide] = useState(Math.round(Math.random()));
 	const [img, setImg] = useState("");
 	const [numFlips, setNumFlips] = useState(0);
 	const [numHeads, setNumHeads] = useState(0);
@@ -32,7 +32,7 @@ const FlipCoin = () => {
 					Flip MEEE!!!
 				</button>
 			</div>
-			<p className="mt-4">
+			<p className="mt-4" id="result">
 				Out of {numFlips} flips, there have been {numHeads} heads and {numTails}{" "}
 				tails.
 			</p>
